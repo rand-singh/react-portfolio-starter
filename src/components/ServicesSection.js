@@ -7,54 +7,88 @@ import money from '../img/money.svg'
 import teamwork from '../img/teamwork.svg'
 import home2 from '../img/home2.png'
 
+// Styles
+import styled from 'styled-components';
+import { About, Description, Hide, Image  } from '../styles'
+
 function ServicesSection() {
     return (
-        <div className="services">
-            <div className="description">
+        <Services>
+            <Description>
                 <h2>High <span>quality</span> services</h2>
                 
-                <div className="cards">
-                    <div className="card">
+                <Cards>
+                    <Card>
                         <div className="icon">
                             <img src={clock} alt="clock icon"/>
                             <h3>Efficient</h3>                            
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
+                    </Card>
 
-                    <div className="card">
+                    <Card>
                         <div className="icon">
                             <img src={diaphragm} alt="diaphragm icon"/>
                             <h3>Diaphragm</h3>                            
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
+                    </Card>
 
-                    <div className="card">
+                    <Card>
                         <div className="icon">
                             <img src={money} alt="money icon"/>
                             <h3>Affordable</h3>                            
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
+                    </Card>
 
-                    <div className="card">
+                    <Card>
                         <div className="icon">
                             <img src={teamwork} alt="Teamwork icon"/>
                             <h3>Teamwork</h3>                            
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
+                    </Card>
 
-                </div>
+                </Cards>
 
-            </div>
+            </Description>
             
-            <div className="image">
+            <Image>
                 <img src={home2} alt="Camera shot"/>
-            </div>           
-        </div>
+            </Image>           
+        </Services>
     )
 }
 
+const Services = styled(About)`
+    h2 {
+        padding-bottom: 5rem;
+    }
+    p {
+        width: 70%;
+        padding-top: 2rem 0 4rem 0;
+    }
+`
+
+const Cards = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`
+
+
+const Card = styled.div`
+    flex-basis: 20rem;
+    .icon {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            margin-left: 1rem;
+            background: white;
+            color: black;
+            padding: 1rem;
+        }
+    }
+`
 export default ServicesSection
