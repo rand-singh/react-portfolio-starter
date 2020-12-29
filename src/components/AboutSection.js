@@ -21,7 +21,7 @@ function AboutSection() {
                 <p>Contact us for any photography or videography ideas that you have. We have professionals with amazing skills</p>
                 <button>Contact Us</button>
                 <div className="image">
-                    <img src={home1} alt="Main Image"/>
+                    <img src={home1} alt="Photographer"/>
                 </div>
             </div>            
         </div>
