@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 function Nav() {
     return (
         <StyledNav>
-            <h1><a href="#" id="logo">Capture</a></h1>
+            <h1>
+                <Link to="/" id="logo">Capture</Link></h1>
             <ul>
                 <li>
                     <Link to="/">1. About Us</Link>
